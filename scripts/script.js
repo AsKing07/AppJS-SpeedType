@@ -298,7 +298,7 @@ function lancerJeu() {
   let form = document.querySelector("form")
   form.addEventListener("submit", (event) => {
       event.preventDefault()
-      let scoreEmail = `${score} / ${i}`
+      let scoreEmail = `${score} / 80`
       gererFormulaire(scoreEmail)
   })
 
