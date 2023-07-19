@@ -6,8 +6,9 @@
  * @param {string} email : l'email de la personne avec qui il veut partager son score
  * @param {string} score : le score. 
  */
-function afficherEmail(nom, email, score) {
-    let mailto = `mailto:${email}?subject=Partage du score SpeedType&body=Salut, je suis ${nom} et je viens de réaliser le score ${score} sur le site de SpeedType !`
+function afficherEmail(nom, email, score) 
+{
+    let mailto = `mailto:${email}?subject=Partage du score SpeedType&body=Salut, je suis ${nom} et je viens de réaliser le score ${score} sur le site de SpeedType ! Viens essayer de battre mon score sur https://asking07.github.io/AppJS-SpeedType/`
     location.href = mailto
 }
 
@@ -291,6 +292,15 @@ function lancerJeu() {
 
   // Ajouter l'écouteur d'événement "keypress" sur la zone de saisie
   inputEcriture.addEventListener("keypress", onKeyPress);
+
+
+  //Gestion du formulaire de partage de score
+  let form = document.querySelector("form")
+  form.addEventListener("submit", (event) => {
+      event.preventDefault()
+      let scoreEmail = `${score} / ${i}`
+      gererFormulaire(scoreEmail)
+  })
 
 }
   
