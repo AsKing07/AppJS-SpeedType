@@ -106,6 +106,10 @@
     affichageMot.innerText = mot;
   }
 
+
+
+
+ let score = 0;
  // Gestion du formulaire de partage de score
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
@@ -120,7 +124,7 @@ form.addEventListener("submit", (event) => {
   function lancerJeu() 
   {
     // Initialisations
-    let score = 0;
+   
     let nbMotsProposes = 0; 
     let listeProposition = listeMots; // Nous utilisons toujours la liste de mots par défaut
     let total = 0; //Le nombre total d'entrées exactes de l'utilisateur
