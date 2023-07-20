@@ -105,6 +105,14 @@
     let affichageMot = document.querySelector(".zoneProposition");
     affichageMot.innerText = mot;
   }
+
+ // Gestion du formulaire de partage de score
+let form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let scoreEmail = `${score} / 80`;
+  gererFormulaire(scoreEmail);
+});
   
   /**
    * Lance le jeu SpeedType.
@@ -277,12 +285,6 @@
     }
     
   
-    // Gestion du formulaire de partage de score
-    let form = document.querySelector("form");
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      let scoreEmail = `${score} / 80`;
-      gererFormulaire(scoreEmail);
-    });
+  
   }
   
