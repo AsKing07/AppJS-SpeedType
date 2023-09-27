@@ -15,6 +15,9 @@ AppJS SpeedType
     └── style.css
 ```
 
+##Image
+<img src="project-img13.png" alt="Image" />
+
 ## Contenu des fichiers
 
 ### index.html
